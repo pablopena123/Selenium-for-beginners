@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [FedRampTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="CreateUserRequestTest(failed)">
+    <parameter name="firstName" value="Alfonso"/>
+    <parameter name="lastName" value="Guzman Zavala"/>
+    <parameter name="workEmail" value="Alfonso.Guzman@ibm.com"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="cnum" value="003025781"/>
+    <parameter name="timesToApproveRequest" value="1"/>
+    <parameter name="managerCnum" value="070630781"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.fedrampah.FedrampAH">
+        <methods>
+          <include name="LoginPage"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.fedrampah.FedrampAH -->
+    </classes>
+  </test> <!-- CreateUserRequestTest(failed) -->
+  <test thread-count="1" parallel="tests" name="VerifyAppServerInfo(failed)">
+    <parameter name="defaultSystem" value="No"/>
+    <parameter name="automatedProvisioning" value="Enable"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="appServerName" value="Github App Board Kabita 13 Aug - 3"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.fedrampah.FedrampAH">
+        <methods>
+          <include name="verifyCbtApp"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.fedrampah.FedrampAH -->
+    </classes>
+  </test> <!-- VerifyAppServerInfo(failed) -->
+</suite> <!-- Failed suite [FedRampTests] -->

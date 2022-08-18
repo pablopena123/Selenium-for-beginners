@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AllTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="CreateUserRequestTest(failed)">
+    <parameter name="firstName" value="Alfonso"/>
+    <parameter name="lastName" value="Guzman Zavala"/>
+    <parameter name="workEmail" value="Alfonso.Guzman@ibm.com"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="cnum" value="003025781"/>
+    <parameter name="managerCnum" value="070630781"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.FedrampAH">
+        <methods>
+          <include name="LoginPage" invocation-numbers="0"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.FedrampAH -->
+    </classes>
+  </test> <!-- CreateUserRequestTest(failed) -->
+  <test thread-count="5" name="VerifyUserRequestTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.FedrampAH">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="verifyUserRequest"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.FedrampAH -->
+    </classes>
+  </test> <!-- VerifyUserRequestTest(failed) -->
+</suite> <!-- Failed suite [AllTests] -->

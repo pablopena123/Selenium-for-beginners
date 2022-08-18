@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="CommercialTests" verbose="1" parallel="tests" thread-count="1">
+
+
+	<test name="CreateUserRequestTest">
+		
+		<classes>
+			<class name="com.herokuapp.theinternet.commercialtests.CommercialTests">
+				
+			</class>
+		</classes>
+	</test>	
+
+</suite>

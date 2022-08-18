@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="FedRampTests" verbose="1" parallel="tests" thread-count="1">
+
+
+	<test name="CreateUserRequestTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="cnum" value="003025781" />
+		<parameter name="firstName" value="Alfonso" />
+		<parameter name="lastName" value="Guzman Zavala" />
+		<parameter name="workEmail" value="Alfonso.Guzman@ibm.com" />
+		<parameter name="managerCnum" value="070630781" />
+		<parameter name="timesToApproveRequest" value="1" />
+		<classes>
+			<class name="com.herokuapp.theinternet.fedrampah.FedrampAH">
+				<methods>
+					<include name="LoginPage"></include>
+					<exclude name="verifyCbtApp"></exclude>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+
+
+
+	<test name="VerifyAppServerInfo">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="appServerName" value="Github App Board Kabita 13 Aug - 3" />
+		<parameter name="defaultSystem" value="No" />
+		<parameter name="automatedProvisioning" value="Enable" />
+		<classes>
+			<class name="com.herokuapp.theinternet.fedrampah.FedrampAH">
+				<methods>
+					<exclude name="LoginPage"></exclude>
+					<include name="verifyCbtApp"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	
+
+</suite>
+
+
+
